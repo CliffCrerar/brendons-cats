@@ -44,7 +44,7 @@ function newButton(href, caption) {
     return newButton;
 }
 
-footer.appendChild(newButton('/', 'home'))
+footer.appendChild(newButton('/', 'Home'))
 footer.appendChild(newButton('/dark-kitty', 'Eyes'))
 footer.appendChild(newButton('/me-me-me', 'Pick Me'))
 footer.appendChild(newButton('/sleepy', 'Sleepy'))
