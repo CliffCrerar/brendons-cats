@@ -15,7 +15,8 @@ const routes = [
     '/whiskers',
     '/meow',
     '/happy-kitty',
-    '/about'
+    '/about',
+    '/wee'
 ]
 
 function errorPage(err) {

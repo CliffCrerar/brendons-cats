@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgb(175, 211, 178)
   }
   
   .a-cat {
@@ -33,7 +34,7 @@
     justify-content: center;
     width: var(--size);
     height: var(--size);
-    background: radial-gradient(#eee, #e9e9e9);
+    // background: radial-gradient(#eee, #e9e9e9);
   }
   
     .a-cat__face {
@@ -75,7 +76,7 @@
         border-radius: 100%;
         width: 40%;
         height: 40%;
-        background-color: #fff;
+        background-color: white;
         animation-name: slide;
         animation-duration: 4s;
         animation-timing-function: ease-in;
