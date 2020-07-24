@@ -1,0 +1,34 @@
+
+.darken{
+    animation: darken linear 3s 6s forwards;
+}
+
+.about-content {
+    animation: framesScrollUp linear 6s 3s forwards;
+}
+
+.fade-in-button {
+    animation: fadeInButton linear 2s 12s forwards;
+}
+
+@keyframes fadeInButton {
+    0% {opacity: 0;} 100% {opacity: 1;}
+}
+
+@keyframes framesScrollUp {
+    0% {
+        top: 150%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes darken {
+    0% {
+        background: transparent;
+    }
+    100%{
+        background: rgba(0, 0, 0, 0.5);
+    }
+}

@@ -8,9 +8,15 @@
         >
         <title>Brendon's Cat</title>
         <link href="/styles/global.css" rel="stylesheet">
-
+        <script src="/scripts/ismobile.js"></script>
     </head>
     <body>
+        <div id="loading" class="loading">
+            <div class="spinner-container">
+                <div class="spinner"></div>
+                <div class="spinner-text">Loading Frame</div>
+            </div>
+        </div>
         <header>
             <div id="page-header-title">
                 <h1 class="page-title">Brendon's Cats</h1>
@@ -18,30 +24,40 @@
         </header>
         <main>
             <iframe id="frame"></iframe>
-            <div id="about-container" class="main-overlay">
-            <div class="about-content center">
-                <h2>Brendon's Cats<h2>
-                    <small>brought to you by</small>
-                <h1>VINNY's BIG TECH</h1>
-                <div><small>a.k.a.</small> AWS Team</div>
-                <div><small>a.k.a.</small> Cloud Vengers</div>
-                <div><small>a.k.a.</small> Dream Team</div>
-                <div><small>a.k.a.</small> Whats our name again</div>
-                <div><small>a.k.a.</small> Brendon's Favorites</div>
-                <hr>
-                <p>You want impossible, sure no problem. You want miracles. Well that might take only a little bit longer.</p>
-                <hr>
-                <p>Author: Cliff Crerar</p>
-                <button class="backhome" id="back-home">Back Home</button>
+            <div id="about-container" class="main-overlay darken">
+                <div class="about-content center">
+                    <h2>Brendon's Cats<h2>
+                        <small>brought to you by</small>
+                    <h1>VINNY's BIG TECH</h1>
+                    <div><small>a.k.a.</small> AWS Team</div>
+                    <div><small>a.k.a.</small> Cloud Vengers</div>
+                    <div><small>a.k.a.</small> Dream Team</div>
+                    <div><small>a.k.a.</small> Whats our name again</div>
+                    <div><small>a.k.a.</small> Brendon's Favorites</div>
+                    <hr/>
+                    <p>You want impossible, sure no problem. You want miracles. Well, that might take a bit longer.</p>
+                    <hr>
+                    <p>Author: Cliff Crerar</p>
+                    <button class="backhome fade-in-button" id="back-home">Back Home</button>
+                </div>
             </div>
-        </div>
         </main>
         <footer>
-            <div class="foot-inner">
+            <div id="desktop-footer" class="foot-inner">
                 <div
                     id="page-links"
                     class="page-links"
                 >
+                </div>
+            </div>
+            <div id="mobile-footer" style="position:absolute;bottom:0;padding: 10px; width: 100%">
+                <div style="display: block; border: 1px solid black;border-radius: 50%; z-index: 1000; overflow: hidden; height: 50px;width: 50px;margin: auto;">
+                    <img style="margin: -2px  0px 0 -4px;display: block;height: 60px;width: 60px; position:relative;z-index: 100;" src="/img/paw.jpg">
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <div id="mobileMenu">
+                    
                 </div>
             </div>
         </footer>
