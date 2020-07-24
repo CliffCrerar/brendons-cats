@@ -1,0 +1,267 @@
+/* Pure CSS
+** CSS flexbox
+** CSS Custom properties
+** CSS animations
+*/
+
+:root {
+    --color-main: #000;
+    --color-second: #ccc;
+    --size: 340px;
+    --animation-play: running;
+  }
+  
+  @media screen and (min-width: 640px) {
+    :root {
+      --size: 600px;
+    }
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .a-cat {
+    border-radius: 100%;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(#eee, #e9e9e9);
+  }
+  
+    .a-cat__face {
+        position: relative;
+        top: 5%;
+        width: 75%;
+        height: 70%;
+    }
+  
+    .a-cat__head {
+        position: relative;
+        z-index: 1;
+        box-sizing: border-box;
+        border-radius: 100%;
+        border: 0.5rem solid var(--color-main);
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-second);
+    }
+  
+    .a-cat__eye {
+        position: absolute;
+        top: 30%;
+        z-index: 3;
+        overflow: hidden;
+        border-radius: 100%;
+        width: 20%;
+        height: 20%;
+        background-color: var(--color-main);
+        transform-origin: center;
+    }
+      
+      .a-cat__eye:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 25%;
+        right: 15%;
+        border-radius: 100%;
+        width: 40%;
+        height: 40%;
+        background-color: #fff;
+        animation-name: slide;
+        animation-duration: 4s;
+        animation-timing-function: ease-in;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-play-state: var(--animation-play);
+      }
+  
+      .a-cat__eye--left {
+        left: 20%;
+      }
+      
+      .a-cat__eye--right {
+        right: 20%;
+      }
+    
+    .a-cat__nose {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      z-index: 3;
+      border-radius: 80%;
+      width: 20%;
+      height: 15%;
+      background-color: var(--color-main);
+      transform: translateX(-50%);
+      clip-path: polygon(0 0, 50% 100%, 100% 0);
+    }
+    
+    .a-cat__nose:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: inherit;
+      width: 100%;
+      height: 100%;
+      background-color: pink;
+      transform: translateX(-50%) scale(0.6);
+      clip-path: inherit;
+    }
+  
+    .a-cat__mouth {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      z-index: 2;
+      width: 20%;
+      height: 15%;
+      transform: translateX(-50%);
+    }
+      
+      .a-cat__mouth:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -20%;
+        border-radius: 100%;
+        border-right: 0.2rem solid currentColor;
+        border-bottom: 0.5rem solid currentColor;
+        width: 70%;
+        height: 55%;
+      }
+      
+      .a-cat__mouth:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -20%;
+        border-radius: 100%;
+        border-left: 0.2rem solid currentColor;
+        border-bottom: 0.5rem solid currentColor;
+        width: 70%;
+        height: 55%;
+      }
+    
+    .a-cat__ear {
+      position: absolute;
+      top: 0%;
+      z-index: 1;
+      border: 0.5rem solid var(--color-main);
+      width: 23%;
+      height: 23%;
+      background-color: var(--color-second);
+    }
+      
+      .a-cat__ear--left {
+        border-right-width: 0;
+        border-bottom-width: 0;
+        left: 4%;
+        transform: skew(14deg, 16deg);
+      }
+      
+      .a-cat__ear--right {
+        border-left-width: 0;
+        border-bottom-width: 0;
+        right: 4%;
+        transform: skew(-14deg, -16deg);
+      }
+  
+    .a-cat__mustache {
+      position: absolute;
+      top: 65%;
+      z-index: 4;
+      width: 25%;
+      height: 0.2rem;
+      background-color: var(--color-main);
+    }
+  
+    .a-cat__mustache--left {
+      left: 15%;
+      transform-origin: top right;
+    }
+  
+    .a-cat__mustache--right {
+      right: 15%;
+      transform-origin: top left;
+    }
+    
+      .a-cat__mustache:before,
+      .a-cat__mustache:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        background-color: inherit;
+        transform-origin: inherit;
+        animation-duration: 4s;
+        animation-timing-function: steps(4);
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-play-state: var(--animation-play);
+      }
+  
+      .a-cat__mustache:before {
+        transform: rotate(15deg);
+        animation-name: rotateMustache;
+      }
+  
+      .a-cat__mustache:after {
+        transform: rotate(-15deg);
+        animation-name: rotateMustache2;
+      }
+  
+      .a-cat__mustache--left:before,
+      .a-cat__mustache--right:after {
+        top: -0.5rem;
+      }
+  
+      .a-cat__mustache--left:after,
+      .a-cat__mustache--right:before {
+        top: 0.5rem;
+      }
+  
+  @keyframes slide {
+    0%, 50%, 100% {
+      right: 15%;
+    }
+    25% {
+      left: 15%;
+    }
+  }
+  
+  @keyframes rotateMustache {
+    0%, 100% {
+      transform: rotate(15deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+  }
+  
+  @keyframes rotateMustache2 {
+    0%, 100% {
+      transform: rotate(-15deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+  }

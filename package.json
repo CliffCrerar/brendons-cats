@@ -1,0 +1,27 @@
+{
+  "name": "brendons-cat",
+  "version": "1.0.0",
+  "description": "For Brendon, he wanted a cat.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CliffCrerar/brendons-cat.git"
+  },
+  "keywords": [
+    "cat"
+  ],
+  "author": "Cliff Crerar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CliffCrerar/brendons-cat/issues"
+  },
+  "homepage": "https://github.com/CliffCrerar/brendons-cat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-sass": "^4.14.1"
+  }
+}

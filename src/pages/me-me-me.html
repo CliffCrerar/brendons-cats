@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me Me Me</title>
+    <link rel="stylesheet" href="/styles/me-me-me.css" type="text/css"/>
+    <style>
+        .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container center">
+        <div class="text">
+          <ul style="opacity: 0;">
+            <li>Friend/mutual: *Uploads artwork*</li>
+            <li>Me:</li>
+          </ul>
+        </div>
+        <div class="cat" onclick="hello()">
+          <div class="catHead"></div>
+          <div class="catEars">
+            <span class="rightEar"></span>
+          </div>
+          <div class="face">
+            <span class="mouth"></span>
+          </div>
+          <div id="leftPaw" class="leftPaw">
+            <span id="paws" class="paws">
+                          <span id="circles" class="circles"></span>
+            </span>
+          </div>
+          <div id="rightPaw" class="rightPaw">
+            <span id="rpaws" class="paws">
+                          <span id="rcircles" class="circles"></span>
+            </span>
+          </div>
+        </div>
+        <div class="surface">
+          <span><i id="retweet" class="fas fa-retweet"></i></span>
+          <span><i id="heart" class="rotate fas fa-heart"></i></span>
+          
+        </div>
+      </div>
+      <script src="/scripts/me-me-me.js"></script>
+</body>
+</html>

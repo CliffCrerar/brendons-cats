@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+
+@mixin fullViewPort {
+    padding: 0;
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    height: auto;
+}
+
+$font-color: white;
+
+body,
+html {
+    @include fullViewPort;
+}
+
+iframe {
+    @include fullViewPort;
+    border: none;
+}
+
+header{
+    div{
+        transform: rotate(10deg, 0);
+    }
+}
+
+.page-title {
+    color: $font-color;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    font-family: Ranchers;
+    font-size: 4em;
+    letter-spacing: 10px;
+    text-shadow: 1px 3px 10px black;
+}
+
+.page-links {
+    position: absolute;
+    padding: 20px 100px;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    a {
+        color: $font-color;
+        font-family: Ranchers;
+        font-size: 2.5em;
+        text-decoration: none;
+        text-underline-position: none;
+        
+        transition: all 0.3s;
+        &:hover {
+            color: pink !important;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
