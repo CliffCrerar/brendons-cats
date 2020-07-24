@@ -1,7 +1,7 @@
 
 const frame = document.getElementById('frame');
 const footer = document.getElementById('page-links');
-const footerElement = document.getElementById('footer');
+const footerElement = document.getElementsByTagName('footer')[0];
 const credits = document.getElementById('about-container');
 const pageHeader = document.getElementById('page-header-title');
 const backHome = document.getElementById('back-home');
@@ -20,11 +20,6 @@ if(location.pathname === '/about'){
     pageHeader.hidden = false;
     footerElement.hidden = false;
 };
-
-backHome.addEventListener('click',function(ev){
-    console.log('ev: ', ev);
-    location.pathname="/home"
-})
 
 
 function loadStyle(url) {
@@ -59,3 +54,9 @@ footer.appendChild(newButton('/whiskers', 'Whiskers'))
 footer.appendChild(newButton('/meow', 'Meow'))
 footer.appendChild(newButton('/happy-kitty', 'Happy'))
 footer.appendChild(newButton('/about', 'About'))
+
+
+backHome.addEventListener('click',function(ev){
+    console.log('ev: ', ev);
+    location.pathname="/"
+})
