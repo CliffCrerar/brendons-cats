@@ -10,6 +10,7 @@ const anchors = document.getElementsByTagName('a');
 const desktopFooter = document.getElementById('desktop-footer');
 const mobileFooter = document.getElementById('mobile-footer');
 const mobileMenu = document.getElementById('mobileMenu');
+const menuContainer = document.getElementsByClassName('mobile-menu')[0];
 console.log('btnDiv: ', footer);
 console.log('frame: ', frame);
 
@@ -20,34 +21,36 @@ if(window.isMobile){
     desktopFooter.remove();
 } else { 
     console.log('is mobile');
-    mobileFooter.remove()
+    mobileFooter.remove();
+    menuContainer.remove();
 }
 
 let menuStateOpen = false;
 footerElement.addEventListener('click',()=>{
     console.log('click');
     // mobileMenu.classList.add('slide-in');
-    const menu = document.getElementsByClassName('mobile-menu')[0];
+    
     
     if(menuStateOpen){
         
         menuStateOpen = false;
-        menu.classList.add('slide-out');
-        menu.classList.remove('slide-in');
+        // menuContainer.style.marginLeft = '100%'
+        menuContainer.classList.add('slide-out');
+        
         setTimeout(()=>{
-            
+            menuContainer.classList.remove('slide-in');
         },1000)
         
 
     } else {
         
         menuStateOpen = true;
-        menu.classList.add('slide-in');
-        menu.classList.remove('slide-out');
-        setTimeout(()=>{
-            
-        },1000)
+        // menuContainer.style.marginLeft = '-100%'
+        menuContainer.classList.add('slide-in');
         
+        setTimeout(()=>{
+            menuContainer.classList.remove('slide-out');
+        },1000)
     }
 })
 
