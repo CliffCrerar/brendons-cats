@@ -69,16 +69,16 @@ if (location.pathname === '/about') {
 
 function loadStyle(url) {
     switch (url) {
-        case '/': return '/pages/landing.html';
-        case '/dark-kitty': return '/pages/dark-kitty.html';
-        case '/me-me-me': return '/pages/me-me-me.html';
-        case '/sleepy': return '/pages/sleepy.html';
-        case '/working-here': return '/pages/working-here.html';
-        case '/whiskers': return '/pages/whiskers.html';
-        case '/meow': return '/pages/meow.html';
-        case '/happy-kitty': return '/pages/happy-kitty.html';
-        case '/about': return '/pages/about.html';
-        case '/wee': return '/pages/wee.html';
+        case '/': return '/src/pages/landing.html';
+        case '/dark-kitty': return '/src/pages/dark-kitty.html';
+        case '/me-me-me': return '/src/pages/me-me-me.html';
+        case '/sleepy': return '/src/pages/sleepy.html';
+        case '/working-here': return '/src/pages/working-here.html';
+        case '/whiskers': return '/src/pages/whiskers.html';
+        case '/meow': return '/src/pages/meow.html';
+        case '/happy-kitty': return '/src/pages/happy-kitty.html';
+        case '/about': return '/src/pages/about.html';
+        case '/wee': return '/src/pages/wee.html';
     }
 }
 
