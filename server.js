@@ -35,11 +35,15 @@ function setRouteListener(route, relFilePath) {
     })
 }
 
-app.all('*', (req, res, next) => { console.log(res.statusCode, req.path); next() })
-app.use('/', express.static('./src'));
-app.use('/styles', styleConvert);
+app
+    .all('*', (req, res, next) => { console.log(res.statusCode, req.path); next() })
+app
+    .use('/', express.static('./src'));
+app
+    .use('/styles', styleConvert);
 
 setRouteListener(routes, 'index.html');
 // setRouteListener('/dark-kitty','src/pages/dark-kitty.html');
 
-app.listen(port, () => console.log(` <-- app running on port ${port} --> `))
+app
+    .listen(port, () => console.log(` <-- app running on port ${port} --> `))
