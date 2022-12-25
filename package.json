@@ -24,6 +24,6 @@
   "homepage": "https://github.com/CliffCrerar/brendons-cat#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "node-sass": "^7.0.0"
+    "node-sass": "^7.0.3"
   }
 }
